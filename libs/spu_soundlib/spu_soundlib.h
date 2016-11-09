@@ -69,6 +69,10 @@
 #define MID_VOLUME 127
 #define MAX_VOLUME 255
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 // note codification
 
 enum {
@@ -373,5 +377,9 @@ return: SND_INVALID, 0-> not ready to receive a new AddVoice(), 1->ready to rece
 */
 
 int SND_TestVoiceBufferReady(int voice);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
